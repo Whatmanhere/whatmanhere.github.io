@@ -31,8 +31,8 @@
             line-height: 1.6;
             overflow-x: hidden;
             position: relative;
-            overflow-y: auto; /* Enable vertical scrolling */
-            min-height: 100vh; /* Ensure body takes full height */
+            overflow-y: auto;
+            min-height: 100vh;
         }
 
         .container {
@@ -269,10 +269,10 @@
 
         .wave {
             position: absolute;
-            bottom: -100px; /* Adjusted for bigger wave */
+            bottom: -100px; 
             left: 50%;
-            width: 250%; /* Adjusted width */
-            height: 300px; /* Increased height */
+            width: 250%; 
+            height: 300px;
             background: linear-gradient(90deg, #369de2, #245297, #859db8, #245297);
             border-radius: 40%;
             animation: wave-animation 5s ease-in-out infinite;
@@ -282,7 +282,7 @@
 
         @keyframes wave-animation {
             0% { transform: translate(-50%, 0); }
-            50% { transform: translate(-50%, 20px); } /* Increased vertical movement */
+            50% { transform: translate(-50%, 20px); } 
             100% { transform: translate(-50%, 0); }
         }
 
@@ -311,7 +311,6 @@
             100% { transform: translate(100vw, 100vh); }
         }
 
-        /* Additional styling to generate boxes */
         @keyframes box-animation {
             0% { opacity: 0; }
             50% { opacity: 0.1; }
@@ -423,7 +422,6 @@
     </footer>
 
     <script>
-        // Add background boxes dynamically
         const backgroundBoxes = document.querySelector('.background-boxes');
 
         for (let i = 0; i < 50; i++) {
@@ -438,7 +436,6 @@
             backgroundBoxes.appendChild(box);
         }
 
-        // Change header style on scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 0) {
